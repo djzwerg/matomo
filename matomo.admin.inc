@@ -33,7 +33,7 @@ function matomo_admin_settings_form($form_state) {
     '#size' => 80,
     '#maxlength' => 255,
     '#required' => TRUE,
-    '#description' => t('The URL to your Matomo base directory. Example: "http://www.example.com/matomo/".'),
+    '#description' => t('The URL to your Matomo base directory <strong>with leading slash (important!)</strong>. Example: "http://www.example.com/matomo/".'),
   );
   $form['account']['url_https'] = array(
     '#type' => 'textfield',
@@ -41,7 +41,7 @@ function matomo_admin_settings_form($form_state) {
     '#default_value' => $config->get('url_https'),
     '#size' => 80,
     '#maxlength' => 255,
-    '#description' => t('The URL to your Matomo base directory with SSL certificate installed. Required if you track a SSL enabled website. Example: "https://www.example.com/matomo/".'),
+    '#description' => t('The URL to your Matomo base directory with SSL certificate installed <strong>with leading slash (important!)</strong>. Required if you track a SSL enabled website. Example: "https://www.example.com/matomo/".'),
     '#required' => $is_https,
   );
   // Required for automated form save testing only.
